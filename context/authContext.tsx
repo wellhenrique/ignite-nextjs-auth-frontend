@@ -27,10 +27,6 @@ type AuthProviderProps = {
 
 export const AuthContext = createContext({} as AuthContextData);
 
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-};
-
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User>();
   const isAuthenticated = !!user;
